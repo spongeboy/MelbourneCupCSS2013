@@ -372,7 +372,7 @@ font-weight: bold;
 .Royal .silk { background-color: royalblue; }
 .Royal .silk-pattern:before /*product placement*/
 { 
-	content: "    Fly \A Emirates";
+	content: "   Fly\A Emirates";
 	color:white;
 	white-space:pre;
 	font-size: 1.5em;
@@ -439,7 +439,7 @@ font-weight: bold;
 .Hawkspur .silk { background-color: white; }
 .Hawkspur .silk-pattern:before /*5 black stars*/
 { 
-	content:"\2605   \2605\A    \2605\A\2605   \2605";
+	content:"\2605   \2605\A   \2605\A\2605   \2605";
 	color:black;
 	white-space:pre;
 	font-size: 2.8em;
