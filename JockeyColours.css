@@ -1,0 +1,535 @@
+
+/*
+Styles for colouring and adding symbols to 2013 Melbourne Cup jockey silks
+
+Assumes markup like- 
+<td class="colours Voleuse De Coeurs">
+	<div class="cap">
+	</div>
+	<div class="arms left-arm">
+		<div class="arm-pattern">
+		</div>
+	</div>
+	<div class="silk">
+		<div class="silk-pattern">
+		</div>
+	</div>
+	<div class="arms right-arm">
+		<div class="arm-pattern">
+		</div>
+	</div>
+</td>
+*/
+
+/* Must 200px x 200px */
+.colours {
+	width: 200px;
+	height: 200px;
+	position:relative;
+	background-color: #fff;
+}
+
+.cap {
+	background-color: white;
+	width: 25%;
+	height: 18%;
+	left: 40%;
+	top: 4%;
+	position:absolute;
+	border-top-left-radius: 90px;
+	border-top-right-radius: 90px;
+	border: 2px solid black;
+}
+
+.silk {
+background-color: white;
+height: 57%;
+width: 45%;
+left: 30%;
+top: 33%;
+position:absolute;
+z-index: 999;
+border: 2px solid black;
+}
+
+.arms {
+background-color: white;
+height: 46%;
+width: 14%;
+position:absolute;
+z-index: 0;
+border: 2px solid black;
+}
+
+.left-arm {
+top: 33%;
+left: 16%;
+-webkit-transform: rotate(34deg);
+}
+
+
+.right-arm {
+top: 33%;
+left: 75%;
+-webkit-transform: rotate(-34deg);
+}
+
+/*Dunaden - Yellow, Royal Blue Stars, Yellow Cap */
+.Dunaden .cap { background-color: yellow; }
+.Dunaden .silk { background-color: yellow; }
+.Dunaden .silk-pattern:before /*5 green stars*/
+{ 
+	content: "\2605   \2605\A\2605\A\2605   \2605";
+	color: royalblue;
+	white-space:pre;
+	font-size: 2.8em;
+	position: absolute;
+	top: -3%;
+	left: 5%;
+}
+.Dunaden .arms { background-color: yellow; }
+.Dunaden .arm-pattern:before /*stars on arms*/
+{ 
+	content:"\2605\A\2605\A\2605";
+	color:royalblue;
+	font-size: 2em;
+	position: absolute;
+	top: 7%;
+	left: -8%;
+	font-weight: bold;
+}
+
+/*Green Moon - Navy Blue, White Armbands, White Cap*/
+.Green .cap { background-color: white; }
+.Green .silk { background-color: navy; }
+.Green .arms { background-color: navy; }
+.Green .arm-pattern:before /*white arm band*/
+{ 
+	content:"_";
+	color:white;
+	font-size: 5em;
+	position: absolute;
+	top: -10%;
+	left: -6%;
+	font-style: bold;
+	font-weight: bold;
+}
+
+/*Red Cadeaux - Light Blue And Red Diamonds, Light Blue Sleeves, Red And Light Blue Diamond Cap*/
+.Red .cap { background-color: red; }
+.Red .cap:after /*red diamond*/
+{ 
+	content: "\2666\2666";
+	color:lightblue;
+	white-space:pre;
+	font-size: 3.5em;
+	position: absolute;
+	top: -4%;
+	left: 5%;
+	line-height: 1em;
+}
+.Red .silk { background-color: lightblue; }
+.Red .silk-pattern:before /*red diamonds*/
+{ 
+	content:"\2666\2666\2666\2666\A\2666\2666\2666\2666\A\2666\2666\2666\2666\A";
+	color:red;
+	white-space:pre;
+	font-size: 3.5em;
+	position: absolute;
+	top: -3%;
+	left: 5%;
+	line-height: 1em;
+}
+.Red .arms { background-color: lightblue; }
+
+/*Sea Moon - Navy Blue, White Armbands, Navy Blue Cap*/
+.Sea .cap { background-color: navy; }
+.Sea .silk { background-color: navy; }
+.Sea .arms { background-color: navy; }
+.Sea .arm-pattern:before /*white arm band*/
+{ 
+	content:"_";
+	color:white;
+	font-size: 5em;
+	position: absolute;
+	top: -10%;
+	left: -6%;
+	font-weight: bold;
+}
+
+/* Brown Panther - Turquoise, Dark Blue Cap */
+.Brown .cap { background-color: darkblue; }
+.Brown .silk { background-color: turquoise; }
+.Brown .arms { background-color: turquoise; }
+
+/* Fiorente - Black, Purple Sash */
+.Fiorente .cap { background-color: black; }
+.Fiorente .silk { background-color: black;  }
+.Fiorente .silk-pattern:before /*purple sash*/
+{ 
+	content:"/";
+	color:purple;
+	font-weight:bold;
+	font-size: 13.3em;
+	top: -30%;
+	left: 23%;
+	position: absolute;
+}
+.Fiorente .arms { background-color: black; }
+
+/* Foreteller - Green, Yellow Star And Armbands' */
+.Foreteller .cap { background-color: green; }
+.Foreteller .silk { background-color: green; }
+.Foreteller .silk-pattern:before /*yellow star*/
+{ 
+	content:"\2605";
+	color:yellow;
+	font-weight:bold;
+	font-size: 7em;
+}
+.Foreteller .arms { background-color: green; }
+.Foreteller .arm-pattern:before /*yellow arm band*/
+{ 
+	content:"_";
+	color:yellow;
+	font-size: 5em;
+	position: absolute;
+	top: -10%;
+	left: -6%;
+	font-weight: bold;
+}
+
+/* Dandino - Fluorescent Yellow, Navy Blue Seams */
+.Dandino .cap { background-color: yellow; border: 2px solid navy; }
+.Dandino .silk { background-color: yellow; border: 2px solid navy;}
+.Dandino .arms { background-color: yellow; border: 2px solid navy;}
+
+/* Ethiopia - Light Blue, Green Hoops And Cap */
+.Ethiopia .cap { background-color: green; }
+.Ethiopia .silk { background-color: lightblue; }
+.Ethiopia .silk-pattern:before /*green stripes*/
+{ 
+	content:"_\A_\A_\A";
+	color:green;
+	white-space:pre;
+	font-size: 13.1em;
+	position: absolute;
+	top: -63%;
+	left: 3%;
+	line-height: 0.2em;
+	font-weight: bold;
+}
+.Ethiopia .arms { background-color: lightblue; }
+
+/* Fawkner - Navy Blue, White Armbands, Royal Blue Cap */
+.Fawkner .cap { background-color: royalblue; }
+.Fawkner .silk { background-color: navy; }
+.Fawkner .arms { background-color: navy; }
+.Fawkner .arm-pattern:before /*white arm band*/
+{ 
+	content:"_";
+	color:white;
+	font-size: 5em;
+	position: absolute;
+	top: -10%;
+	left: -6%;
+	font-style: bold;
+	font-weight: bold;
+}
+
+/* Mourayan - Navy Blue, White Armbands, Red Cap */
+.Mourayan .cap { background-color: red; }
+.Mourayan .silk { background-color: navy; }
+.Mourayan .arms { background-color: navy; }
+.Mourayan .arm-pattern:before /*white arm band*/
+{ 
+content:"_";
+color:white;
+
+font-size: 5em;
+position: absolute;
+top: -10%;
+left: -6%;
+font-style: bold;
+font-weight: bold;
+}
+
+/* Seville - Navy Blue, White Armbands, Gold Cap */
+.Seville .cap { background-color: gold; }
+.Seville .silk { background-color: navy; }
+.Seville .arms { background-color: navy; }
+.Seville .arm-pattern:before /*white arm band*/
+{ 
+	content:"_";
+	color:white;
+	font-size: 5em;
+	position: absolute;
+	top: -10%;
+	left: -6%;
+	font-style: bold;
+	font-weight: bold;
+}
+
+/* Super Cool - Royal Blue, Large White Brace, White Stripe, Red Brace, Royal Blue And Yellow Stars Sleeves */
+.Super .cap { background-color: royalblue; }
+.Super .silk { background-color: royalblue; }
+.Super .silk-pattern:before /*red brace*/
+{ 
+	content:"\\";
+	color:red;
+	font-weight:bold;
+	font-size: 13.3em;
+	top: -30%;
+	left: -1%;
+	position: absolute;
+}
+.Super .silk-pattern:after /*white brace*/
+{ 
+	content:"/";
+	color:white;
+	font-weight:bold;
+	font-size: 13.3em;
+	top: -30%;
+	left: 52%;
+	position: absolute;
+}
+.Super .cap:after /*white stripe*/
+{ 
+	content: "l";
+	color:white;
+	font-weight: 900;
+	font-size: 13.5em;
+	top: 62%;
+	left: 7%;
+	position: absolute;
+	z-index: 999999;
+}
+.Super .arms { background-color: royalblue; }
+.Super .arm-pattern:before /*stars on arms*/
+{ 
+	content:"\2605\A\2605\A\2605";
+	color:yellow;
+	font-size: 2em;
+	position: absolute;
+	top: 7%;
+	left: -8%;
+	font-weight: bold;
+}
+
+/* Masked Marvel - Navy Blue, White Armbands, Pink Cap */
+.Masked .cap { background-color: pink; }
+.Masked .silk { background-color: navy; }
+.Masked .arms { background-color: navy; }
+.Masked .arm-pattern:before /*white arm band*/
+{ 
+	content:"_";
+	color:white;
+	font-size: 5em;
+	position: absolute;
+	top: -10%;
+	left: -6%;
+	font-weight: bold;
+}
+
+/* Mount Athos - Grey, Beige Star, Grey And Beige Stars Sleeves And Cap */
+.Mount  .cap { background-color: grey; }
+.Mount .cap:after /*beige cap star*/
+{ 
+	content: "\2605\2605\2605";
+	color:beige;
+	white-space:pre;
+	font-size: 1.2em;
+	position: absolute;
+	top: 49%;
+	left: 5%;
+	line-height: 1em;
+	letter-spacing: 3px;
+}
+.Mount  .silk { background-color: grey; }
+.Mount .silk-pattern:before /*beige star*/
+{ 
+	content:"\2605";
+	color: beige;
+	font-weight:bold;
+	font-size: 7em;
+	position: absolute;
+	left: 5%;
+}
+.Mount  .arms { background-color: grey; }
+.Mount .arm-pattern:before /*stars on arms*/
+{ 
+	content:"\2605\A\2605\A\2605";
+	color:beige;
+	font-size: 2em;
+	position: absolute;
+	top: 7%;
+	left: -8%;
+	font-weight: bold;
+}
+
+/* Royal Empire - Royal Blue, Fly Emirates Logo */
+.Royal .cap { background-color: royalblue; }
+.Royal .silk { background-color: royalblue; }
+.Royal .silk-pattern:before /*product placement*/
+{ 
+	content: "    Fly \A Emirates";
+	color:white;
+	white-space:pre;
+	font-size: 1.5em;
+	position: absolute;
+	top: 23%;
+	left: 11%;
+}
+.Royal .arms { background-color: royalblue; }
+
+/* Voleuse De Coeurs - Blue, White And Orange Eliza Park Logo, White Sleeves, Orange Armbands, Blue Cap, Gold Pom pom*/
+.Voleuse .cap { background-color: steelblue; }
+.Voleuse .cap:before /*gold pompom */
+{ 
+	content:"*";
+	color:gold;
+	white-space:pre;
+	font-size: 2.5em;
+	position: absolute;
+	top: -26%;
+	left: 36%;
+	line-height: 0.8em;
+	letter-spacing: -0.3em;
+}
+.Voleuse .silk { background-color: steelblue; }
+.Voleuse .silk-pattern:before /*orange thingy */
+{ 
+	content:"\25b2\25b2\25b2";
+	color:orange;
+	white-space:pre;
+	font-size: 2.5em;
+	position: absolute;
+	top: 21%;
+	left: 11%;
+	line-height: 0.8em;
+	letter-spacing: -0.3em;
+}
+.Voleuse .silk-pattern:after /*white thingy*/
+{ 
+	content:"\25bc\25bc\25bc";
+	color:white;
+	white-space:pre;
+	font-size: 2.5em;
+	position: absolute;
+	top: 38%;
+	left: 11%;
+	line-height: 0.8em;
+	letter-spacing: -0.3em;
+}
+.Voleuse .arms { background-color: white; }
+.Voleuse .arm-pattern:before /*2 orange arm band*/
+{ 
+	content:"_\A_";
+	color:orange;
+	font-size: 5em;
+	position: absolute;
+	top: 8%;
+	left: -5%;
+	font-weight: bold;
+	line-height: 0.3em;
+}
+
+/* Hawkspur - White, Black Stars, Purple And White Stars Sleeves, Purple And White Quartered Cap */
+.Hawkspur .cap { background-color: purple; }
+.Hawkspur .silk { background-color: white; }
+.Hawkspur .silk-pattern:before /*5 black stars*/
+{ 
+	content:"\2605   \2605\A    \2605\A\2605   \2605";
+	color:black;
+	white-space:pre;
+	font-size: 2.8em;
+	position: absolute;
+	top: -3%;
+	left: 5%;
+}
+.Hawkspur .arms { background-color: purple; }
+.Hawkspur .arm-pattern:before /*stars on arms*/
+{ 
+	content:"\2605\A\2605\A\2605";
+	color:white;
+	font-size: 2em;
+	position: absolute;
+	top: 7%;
+	left: -8%;
+	font-weight: bold;
+}
+
+/* Simenon - Purple, Orange Seams, Purple And Orange Star Cap */
+.Simenon .cap { background-color: purple; border: 2px solid orange; }
+.Simenon .silk { background-color: purple; border: 2px solid orange; }
+.Simenon .arms { background-color: purple;  border: 2px solid orange;}
+
+/* Ibicenco - Navy Blue And Gold Hoops, White Sleeves And Cap */
+.Ibicenco .cap { background-color: white; }
+.Ibicenco .silk { background-color: navy; }
+.Ibicenco .silk-pattern:before /*yellow stripes*/
+{ 
+	content:"_\A_\A_\A";
+	color:yellow;
+	white-space:pre;
+	font-size: 13.1em;
+	position: absolute;
+	top: -63%;
+	left: 3%;
+	line-height: 0.2em;
+	font-weight: bold;
+}
+.Ibicenco .arms { background-color: white; }
+
+/* Verema - Green, Red Epaulettes, Green Sleeves And Cap */
+.Verema .cap { background-color: green; }
+.Verema .silk { background-color: green; }
+.Verema .silk-pattern:before /*red epauletters*/
+{ 
+	content: "\\       /";
+	white-space:pre;
+	color:red;
+	font-weight:bold;
+	font-size: 3em;
+	top: -7%;
+	left: 1%;
+	position: absolute;
+}
+.Verema .arms { background-color: green; }
+
+/* Dear Demi - Royal Blue, White Crossed Sashes */
+.Dear  .cap { background-color: royalblue; }
+.Dear  .silk { background-color: royalblue; }
+.Dear .silk-pattern:before /*white st andrews cross*/
+{ 
+	content:"X";
+	color:white;
+	font-weight:bold;
+	font-size: 12em;
+	top: -27%;
+	left: -2%;
+	position: absolute;
+}
+.Dear  .arms { background-color: royalblue; }
+
+/* Tres Blue - Black, Gold Collar And Cap */
+.Tres .cap { background-color: yellow; }
+.Tres .silk { background-color: black; border-top: 2px solid yellow;}
+.Tres .arms { background-color: black; }
+
+/* Ruscello - Navy Blue And Gold Hoops, White Sleeves And  Cap */
+.Ruscello .cap { background-color: red; }
+.Ruscello .silk { background-color: navy; }
+.Ruscello .silk-pattern:before /*yellow stripes*/
+{ 
+	content:"_\A_\A_\A";
+	color:yellow;
+	white-space:pre;
+	font-size: 13.1em;
+	position: absolute;
+	top: -63%;
+	left: 3%;
+	line-height: 0.2em;
+	font-weight: bold;
+}
+.Ruscello .arms { background-color: white; }
